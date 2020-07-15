@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Video Live Stream</title>
+  </head>
+  <body>
+    <h1>Video Live Stream</h1>
+    <img id = "given">
+    <img>
+    <button onclick="myFunction()">start</button>
+    <button onclick="myFunction1()">stop</button>
+    <a href="{%url 'important'%}"><button>Click me</button></a>
+    <script>
+      function myFunction() {
+  document.getElementById("given").src = "{% url 'video_feed' %}";
+  }
+  function myFunction1() {
+  document.getElementById("given").src = "{%url 'important'%} ";
+  }
+    </script>
+  </body>
+</html>
